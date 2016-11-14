@@ -3,7 +3,11 @@ import remotedev from 'mobx-remotedev'
 
 useStrict(true)
 
-export default remotedev(class Counter {
+@remotedev({
+  name: 'CounterStore'
+  // Options: https://github.com/zalmoxisus/mobx-remotedev#api
+})
+export default class Counter {
   @observable counter = 0
 
   @action increment() {
@@ -14,11 +18,11 @@ export default remotedev(class Counter {
     this.counter--
   }
 
-  @action incrementIfOdd() {
+  incrementIfOdd() {
     if (this.counter % 2 === 0) {
       return
     }
-    this.counter++
+    this.increment()
   }
 
   incrementAsync(delay = 1000) {
@@ -26,6 +30,4 @@ export default remotedev(class Counter {
       this.increment();
     }, delay)
   }
-}, {
-  // Options: https://github.com/zalmoxisus/mobx-remotedev#api
-})
+}
