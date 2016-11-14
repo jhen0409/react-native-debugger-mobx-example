@@ -1,0 +1,14 @@
+{
+  "extends": "./node_modules/mybigday-test-utils/eslint.js",
+  "globals": {
+    "__DEV__": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "spaced-comment": 0,
+    "new-cap": [2, { "capIsNewExceptions": ["Map"] }]
+  }
+}

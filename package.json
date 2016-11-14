@@ -1,0 +1,26 @@
+{
+  "name": "RNDMobXExample",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "postinstall": "rndebugger-open"
+  },
+  "dependencies": {
+    "mobx": "^2.6.2",
+    "mobx-react": "^3.5.9",
+    "react": "~15.3.1",
+    "react-native": "0.36.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-react-native": "^1.4.0",
+    "mobx-remotedev": "^0.2.2",
+    "react-dom": "~15.3.1",
+    "react-native-debugger-open": "^0.3.0"
+  },
+  "devEngines": {
+    "node": ">= 6.x"
+  }
+}
